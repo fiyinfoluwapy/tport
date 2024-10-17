@@ -49,3 +49,22 @@ document.addEventListener('DOMContentLoaded', () => {
   animateCircle('css-skill', 75);     // CSS: 75%
   animateCircle('js-skill', 85);      // JavaScript: 85%
 });
+
+
+// Project card functionality
+document.querySelectorAll('.learn-more-btn').forEach(button => {
+  button.addEventListener('click', function () {
+    const projectCard = this.closest('.bg-stone-400'); // Find the closest project card
+    const projectDetail = projectCard.querySelector('.project-detail'); // Find the details of that card
+
+    // Close other project details
+    document.querySelectorAll('.project-detail').forEach(detail => {
+      if (detail !== projectDetail) {
+        detail.classList.add('hidden'); // Hide other project details
+      }
+    });
+
+    // Toggle the clicked project's details
+    projectDetail.classList.toggle('hidden');
+  });
+});
