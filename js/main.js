@@ -51,20 +51,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Project card functionality
+//mobile view and project 
+
+
+// Mobile menu toggle
+document.getElementById('mobile-menu-button').addEventListener('click', function () {
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenu.classList.toggle('hidden'); // Toggle the visibility of the mobile menu
+});
+
+// Select all learn more buttons
 document.querySelectorAll('.learn-more-btn').forEach(button => {
   button.addEventListener('click', function () {
-    const projectCard = this.closest('.bg-stone-400'); // Find the closest project card
-    const projectDetail = projectCard.querySelector('.project-detail'); // Find the details of that card
+    // Get the project detail for the clicked button
+    const projectDetail = this.nextElementSibling;
 
-    // Close other project details
-    document.querySelectorAll('.project-detail').forEach(detail => {
+    // Get all project details
+    const allProjectDetails = document.querySelectorAll('.project-detail');
+
+    // Hide all project details except the one clicked
+    allProjectDetails.forEach(detail => {
+      // Only hide if it's not the clicked project detail
       if (detail !== projectDetail) {
-        detail.classList.add('hidden'); // Hide other project details
+        detail.classList.add('hidden');
       }
     });
 
-    // Toggle the clicked project's details
+    // Toggle visibility for the clicked project detail
     projectDetail.classList.toggle('hidden');
   });
 });
+
+
