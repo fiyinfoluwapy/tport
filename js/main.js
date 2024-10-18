@@ -82,4 +82,60 @@ document.querySelectorAll('.learn-more-btn').forEach(button => {
   });
 });
 
+// JavaScript for the Contact Form
 
+// document.addEventListener('DOMContentLoaded', function () {
+//   const contactForm = document.getElementById('contact-form');
+//   const contactSection = document.getElementById('contact');
+
+//   const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         contactForm.classList.add('fade-in'); // Add fade-in class
+//         observer.unobserve(contactSection); // Stop observing after fading in
+//       }
+//     });
+//   }, {
+//     threshold: 0.5 // Fade in when 50% of the section is visible
+//   });
+
+//   observer.observe(contactSection); // Observe the contact section
+
+//   // Handle form submission
+//   document.getElementById('contact-form').addEventListener('submit', function (e) {
+//     e.preventDefault();
+//     const form = e.target;
+
+//     // Example: Submit to Formspree
+//     const formData = new FormData(form);
+//     fetch('https://formspree.io/f/YOUR_FORM_ID', { // Replace with your Formspree ID
+//       method: 'POST',
+//       body: formData,
+//       headers: {
+//         'Accept': 'application/json'
+//       }
+//     }).then(response => {
+//       if (response.ok) {
+//         alert('Thanks for your message!');
+//         form.reset(); // Reset the form after successful submission
+//       } else {
+//         alert('Oops! There was a problem submitting your form');
+//       }
+//     });
+//   });
+// });
+
+
+// scroll-triggered fade in for contact form 
+
+
+
+const contactSection = document.getElementById('contact');
+window.addEventListener('scroll', () => {
+  const contactPosition = contactSection.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight;
+
+  if (contactPosition < screenPosition) {
+    contactSection.classList.add('fade-in');
+  }
+});
