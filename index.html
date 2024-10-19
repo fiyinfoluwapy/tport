@@ -23,7 +23,7 @@
         <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
             <div class="container mx-auto flex items-center justify-between py-4 px-6">
                 <!-- Left Side: Email Logo -->
-                <div class="flex items-center">
+                <div class="flex items-center slide-into-view  slide-from-left">
                     <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
                         fill="#fEBF24">
                         <path
@@ -33,7 +33,7 @@
                 </div>
 
                 <!-- Center: Buttons -->
-                <div class="hidden md:flex space-x-4">
+                <div class="hidden md:flex space-x-4 slide-into-view ">
                     <a href="#projects"
                         class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300">View
                         Projects</a>
@@ -43,7 +43,7 @@
                 </div>
 
                 <!-- Right Side: Navigation Links -->
-                <div class="hidden md:flex space-x-6">
+                <div class="hidden md:flex space-x-6 slide-into-view slide-from-right">
                     <a href="#about" class="text-gray-800 hover:text-[#459392] transition-colors duration-300">About</a>
                     <a href="#skills"
                         class="text-gray-800 hover:text-[#459392] transition-colors duration-300">Skills</a>
@@ -54,7 +54,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden">
+                <button id="mobile-menu-button" class="md:hidden  slide-into-view slide-from-right">
                     <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
                         fill="#fEBF24">
                         <path d="M360-120v-720h60v720h-60Zm175-181v-358l185 179-185 179Z" />
@@ -64,8 +64,7 @@
 
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-                <a href="#projects" class="block px-6 py-2">View Projects</a>
-                <a href="#contact" class="block px-6 py-2">Contact Me</a>
+                <a href="#hero" class="block px-6 py-2">Home</a>
                 <a href="#about" class="block px-6 py-2">About</a>
                 <a href="#skills" class="block px-6 py-2">Skills</a>
                 <a href="#projects" class="block px-6 py-2">Projects</a>
@@ -77,22 +76,22 @@
     <!--hero section-->
     <section id="hero" class="flex flex-col items-center justify-center min-h-screen bg-zinc-800 text-white">
         <!--avatar-->
-        <div class="relative">
+        <div class="relative slide-into-view ">
             <img src="https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg" alt="avatar"
                 class="h-40 w-40 rounded-full border-4 border-stone-400 shadow shadow-2xl">
-            <p class="absolute bottom-0 right-0 bg-stone-400 text-white px-2 py-1 rounded-full">@teedire_9</p>
+            <p class="absolute bottom-0 right-0 bg-stone-400 text-white px-2 py-1 rounded-full slide-into-view slide-from-left">@teedire_9</p>
         </div>
 
         <!--headline text-->
-        <h1 class="text-4xl md:text-6xl font-bold text-center mt-6 leading-snug">
+        <h1 class="text-4xl md:text-6xl font-bold text-center mt-6 leading-snug slide-into-view ">
             Creating <br />
-            <span class="text-amber-400">experiences & products</span> <br />
+            <span class="text-amber-400 slide-into-view slide-from-left">experiences & products</span> <br />
             that delight users
         </h1>
 
         <!--follow me btn-->
         <button id="follow-button"
-            class="mt-8 bg-transparent border-2 border-amber-400 text-amber-400 px-6 py-2 rounded-lg hover:text-white transition duration-300">
+            class="mt-8 bg-transparent border-2 border-amber-400 text-amber-400 px-6 py-2 rounded-lg hover:text-white transition duration-300 slide-into-view slide-from-bottom">
             Follow Me
         </button>
 
@@ -113,6 +112,9 @@
             </a>
         </div>
     </section>
+
+
+
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-stone-500">
         <div class="container mx-auto text-center">
@@ -627,10 +629,10 @@
 
     </section>
 
-    <section id="FAQ" class="bg-red-500 hidden">
+    <section id="FAQ" class="bg-red-500 ">
         <div class="faq-section mx-auto p-4 max-w-4xl">
             <h2 class="text-center text-3xl font-bold text-white">FAQs</h2>
-            <div class="faq-item border-b border-slate-500 py-4 shadow-2xl">
+            <div class="faq-item border-b border-slate-700 py-4 shadow-2xl">
                 <h3 class="faq-title text-lg font-semibold cursor-pointer flex justify-between items-center">
                     What do you need to design an outfit
                     <span class="faq-toggle-icon">+</span>
@@ -640,7 +642,7 @@
                 </div>
             </div>
 
-            <div class="faq-item border-b border-gray-200 py-4 shadow-md">
+            <div class="faq-item border-b  border-slate-700 py-4 shadow-md">
                 <h3 class="faq-title text-lg font-semibold cursor-pointer flex justify-between items-center">
                     Do you ship internationally?
                     <span class="faq-toggle-icon">+</span>
@@ -650,7 +652,7 @@
                 </div>
             </div>
 
-            <div class="faq-item border-b border-gray-200 py-4 shadow-md">
+            <div class="faq-item border-b  border-slate-700 py-4 shadow-md">
                 <h3 class="faq-title text-lg font-semibold cursor-pointer flex justify-between items-center">
                     How long does it take to design & ship an outfit?
                     <span class="faq-toggle-icon">+</span>
@@ -659,7 +661,7 @@
                     <p>Maximum of two weeks</p>
                 </div>
             </div>
-            <div class="faq-item border-b border-gray-200 py-4 shadow-md">
+            <div class="faq-item border-b  border-slate-700 py-4 shadow-md">
                 <h3 class="faq-title text-lg font-semibold cursor-pointer flex justify-between items-center">
                     Do you make corporate wears?
                     <span class="faq-toggle-icon">+</span>
@@ -668,7 +670,7 @@
                     <p>Yes we do. You imagine it, and we make it a wearable!</p>
                 </div>
             </div>
-            <div class="faq-item border-b border-gray-200 py-4 shadow-md">
+            <div class="faq-item border-b  border-slate-700 py-4 shadow-md">
                 <h3 class="faq-title text-lg font-semibold cursor-pointer flex justify-between items-center">
                     Do you make group outfits?
                     <span class="faq-toggle-icon">+</span>
@@ -680,37 +682,59 @@
         </div>
     </section>
 
-    <section id="testimonials">
-        <div class="testimonial-carousel relative mx-auto max-w-4xl h-64 overflow-hidden" id="#testimonials">
-            <div
-                class="testimonial-slide absolute w-full p-6 text-center text-gray-600 opacity-0 transition-opacity duration-700 ease-in-out">
-                <p class="text-lg italic">"Henry Classics made the perfect outfit for my wedding!"</p>
-                <span class="block mt-4 text-sm text-gray-500">- Mr Adebayo</span>
-            </div>
-            <div
-                class="testimonial-slide absolute w-full p-6 text-center text-gray-600 opacity-0 transition-opacity duration-700 ease-in-out">
-                <p class="text-lg italic">"Amazing quality and attention to detail, highly recommend!"</p>
-                <span class="block mt-4 text-sm text-gray-500">- Temidire</span>
-            </div>
-            <div
-                class="testimonial-slide absolute w-full p-6 text-center text-gray-600 opacity-0 transition-opacity duration-700 ease-in-out">
-                <p class="text-lg italic">"Best tailoring service I’ve ever used!"</p>
-                <span class="block mt-4 text-sm text-gray-500">- Holy Messenger (MC)</span>
-            </div>
-            <div
-                class="testimonial-slide absolute w-full p-6 text-center text-gray-600 opacity-0 transition-opacity duration-700 ease-in-out">
-                <p class="text-lg italic">"Swift delivery and good customer service"</p>
-                <span class="block mt-4 text-sm text-gray-500">- Mrs Udeh (JP)</span>
-            </div>
-            <div
-                class="testimonial-slide absolute w-full p-6 text-center text-gray-600 opacity-0 transition-opacity duration-700 ease-in-out">
-                <p class="text-lg italic">"World class craftsmanship !"</p>
-                <span class="block mt-4 text-sm text-gray-500">- Elias Daniel</span>
+
+    <section class="min-h-screen flex items-center justify-center">
+        <div class="w-full max-full max-w-2xl mx-auto">
+            <!--testimonial section-->
+            <div id="testimonial-carousel" class="relative p-8 bg-white shadow-lg rounded-lg text-center">
+                <!--testimony card 1-->
+                <div class="testimonial-card fade-into-view active text-gray-700">
+                    <p class="text-lg italic text-gray-900">"If you need a good job well done, contact him!"</p>
+                    <h3 class="mt-4 font-semibold text-gray-900">- Henry Classics</h3>
+                </div>
+
+                <!--testimony card 2-->
+                <div class="testimonial-card fade-into-view text-gray-700">
+                    <p class="text-lg italic text-gray-900">"His services are impeccable, highly recommended!"</p>
+                    <h3 class="mt-4 font-semibold text-gray-900">- Sarah Brown</h3>
+                </div>
+
+                <!--testimony card 3-->
+                <div class="testimonial-card fade-into-view text-gray-700">
+                    <p class="text-lg italic text-gray-900">"Excellent communication and great results!"</p>
+                    <h3 class="mt-4 font-semibold text-gray-900">- Michael Jordan</h3>
+                </div>
             </div>
         </div>
     </section>
 
+    <footer class="bg-neutral-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Social Media Links -->
+            <div class="mb-4">
+                <a href="https://github.com/yourprofile" class="mx-2 text-gray-400 hover:text-white">
+                    <i class="fab fa-github"></i> <!-- Font Awesome Icon -->
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="mx-2 text-gray-400 hover:text-white">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" class="mx-2 text-gray-400 hover:text-white">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
 
+            <!-- Contact Information -->
+            <div class="mb-4">
+                <p>Email: <a href="mailto:youremail@example.com"
+                        class="text-gray-400 hover:text-white">youremail@example.com</a></p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-sm text-gray-500">
+                <p>&copy; 2024 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

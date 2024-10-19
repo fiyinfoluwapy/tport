@@ -13,6 +13,10 @@ canvas {
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
 .input-field:focus {
   border-color: #459392;
   background-color: #f1f1f1;
@@ -21,8 +25,10 @@ canvas {
 /* CSS for the Contact Form */
 
 #contact {
-  min-height: 100vh; /* Ensure enough height for scrolling */
-  position: relative; /* For the Intersection Observer */
+  min-height: 100vh;
+  /* Ensure enough height for scrolling */
+  position: relative;
+  /* For the Intersection Observer */
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 3.8s ease, transform 3.8s ease;
@@ -39,7 +45,8 @@ canvas {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #DCBEA4;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
+  /* Rounded corners */
   background-color: white;
   outline: none;
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -47,21 +54,75 @@ canvas {
 
 .input-field:focus {
   border-color: #459392;
-  background-color: #f1f1f1; /* Highlight on focus */
+  background-color: #f1f1f1;
+  /* Highlight on focus */
 }
 
 .button-primary {
-  width: 100%; /* Make the button full width */
-  background-color: #AA8771; /* Button background color */
-  color: white; /* Button text color */
-  font-weight: bold; /* Bold text */
-  padding: 0.75rem; /* Padding for button */
-  border: none; /* No border */
-  border-radius: 8px; /* Rounded corners */
-  transition: background-color 0.3s ease; /* Transition for hover effect */
+  width: 100%;
+  /* Make the button full width */
+  background-color: #AA8771;
+  /* Button background color */
+  color: white;
+  /* Button text color */
+  font-weight: bold;
+  /* Bold text */
+  padding: 0.75rem;
+  /* Padding for button */
+  border: none;
+  /* No border */
+  border-radius: 8px;
+  /* Rounded corners */
+  transition: background-color 0.3s ease;
+  /* Transition for hover effect */
 }
 
 .button-primary:hover {
-  background-color: #DCBEA4; /* Change background on hover */
+  background-color: #DCBEA4;
+  /* Change background on hover */
 }
 
+/* Fade-in and fade-out animation */
+.fade-into-view {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-into-view.active {
+  opacity: 1;
+}
+
+.slide-into-view{
+  opacity: 0; /* Start invisible */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for smooth effect */
+}
+.slide-into-view-active{
+  opacity: 1;
+}
+
+.slide-from-left{
+  transform: translateX(-100%);
+}
+.slide-from-left-active{
+  transform: translateX(0);
+}
+
+.slide-from-right {
+  transform: translateX(100%); /* Slide in from right */
+}
+.slide-from-top {
+  transform: translateY(-100%); /* Slide in from top */
+}
+.slide-from-bottom {
+  transform: translateY(100%); /* Slide in from bottom */
+}
+
+.slide-from-right-active {
+  transform: translateX(0); /* Final position for right slide */
+}
+.slide-from-top-active {
+  transform: translateY(0); /* Final position for top slide */
+}
+.slide-from-bottom-active {
+  transform: translateY(0); /* Final position for bottom slide */
+}

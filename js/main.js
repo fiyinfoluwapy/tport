@@ -152,18 +152,65 @@ document.querySelectorAll('.faq-title').forEach(title => {
 });
 
 // Testimonials Carousel Animation
-let currentTestimonial = 0;
-const testimonials = document.querySelectorAll('.testimonial-slide');
+// let currentTestimonial = 0;
+// const testimonials = document.querySelectorAll('.testimonial-slide');
 
-function showNextTestimonial() {
-  testimonials[currentTestimonial].classList.remove('opacity-100');
-  testimonials[currentTestimonial].classList.add('opacity-0');
+// function showNextTestimonial() {
+//   testimonials[currentTestimonial].classList.remove('opacity-100');
+//   testimonials[currentTestimonial].classList.add('opacity-0');
 
-  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+//   currentTestimonial = (currentTestimonial + 1) % testimonials.length;
 
-  testimonials[currentTestimonial].classList.remove('opacity-0');
-  testimonials[currentTestimonial].classList.add('opacity-100');
+//   testimonials[currentTestimonial].classList.remove('opacity-0');
+//   testimonials[currentTestimonial].classList.add('opacity-100');
+// }
+
+// setInterval(showNextTestimonial, 4000);
+// testimonials[0].classList.add('opacity-100');
+
+//js to handle tesimonial carousel
+
+// JavaScript to handle the carousel functionality
+const testimonials = document.querySelectorAll('.testimonial-card');
+let currentIndex = 0;
+
+// Function to change the visible testimonial
+function showTestimonial(index) {
+  testimonials.forEach((testimonial, i) => {
+    testimonial.classList.remove('active');
+    if (i === index) {
+      testimonial.classList.add('active');
+    }
+  });
 }
 
-setInterval(showNextTestimonial, 4000);
-testimonials[0].classList.add('opacity-100');
+// Automatically cycle through testimonials every 3 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  showTestimonial(currentIndex);
+}, 4000); // Change the time here (4000 = 4 seconds)
+
+
+//js for header section 
+
+window.onload = function() {
+  // Select elements to animate
+  const items = document.querySelectorAll('.slide-into-view');
+
+  // Animate top container items
+  items.forEach((item, index) => {
+      setTimeout(() => {
+          item.classList.add('slide-into-view-active');
+          // Add specific active classes for final positions
+          if (item.classList.contains('slide-from-left')) {
+              item.classList.add('slide-from-left-active');
+          } else if (item.classList.contains('slide-from-right')) {
+              item.classList.add('slide-from-right-active');
+          } else if (item.classList.contains('slide-from-top')) {
+              item.classList.add('slide-from-top-active');
+          } else if (item.classList.contains('slide-from-bottom')) {
+              item.classList.add('slide-from-bottom-active');
+          }
+      }, index * 300); // Delay each item
+  });
+}
