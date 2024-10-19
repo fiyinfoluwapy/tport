@@ -129,7 +129,6 @@ document.querySelectorAll('.learn-more-btn').forEach(button => {
 // scroll-triggered fade in for contact form 
 
 
-
 const contactSection = document.getElementById('contact');
 window.addEventListener('scroll', () => {
   const contactPosition = contactSection.getBoundingClientRect().top;
@@ -139,3 +138,32 @@ window.addEventListener('scroll', () => {
     contactSection.classList.add('fade-in');
   }
 });
+
+// FAQ functionality
+document.querySelectorAll('.faq-title').forEach(title => {
+  title.addEventListener('click', function () {
+    const faqItem = this.parentElement;
+    const faqContent = faqItem.querySelector('.faq-content');
+    const faqIcon = faqItem.querySelector('.faq-toggle-icon');
+
+    faqContent.classList.toggle('hidden');
+    faqIcon.textContent = faqContent.classList.contains('hidden') ? '+' : '-';
+  });
+});
+
+// Testimonials Carousel Animation
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll('.testimonial-slide');
+
+function showNextTestimonial() {
+  testimonials[currentTestimonial].classList.remove('opacity-100');
+  testimonials[currentTestimonial].classList.add('opacity-0');
+
+  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+
+  testimonials[currentTestimonial].classList.remove('opacity-0');
+  testimonials[currentTestimonial].classList.add('opacity-100');
+}
+
+setInterval(showNextTestimonial, 4000);
+testimonials[0].classList.add('opacity-100');
