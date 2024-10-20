@@ -142,3 +142,10 @@ html {
   font-variation-settings:
     "slnt" 0;
 }
+
+.arima-font {
+  font-family: "Arima", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}

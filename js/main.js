@@ -214,3 +214,13 @@ window.onload = function() {
       }, index * 300); // Delay each item
   });
 }
+
+// Select the button and social icons container
+const followButton = document.getElementById('follow-button');
+const socialIcons = document.getElementById('social-icons');
+
+// Add click event listener to the button
+followButton.addEventListener('click', () => {
+  // Toggle hidden class and add slide effect
+  socialIcons.classList.toggle('hidden');
+});
