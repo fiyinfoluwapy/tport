@@ -224,3 +224,5 @@ followButton.addEventListener('click', () => {
   // Toggle hidden class and add slide effect
   socialIcons.classList.toggle('hidden');
 });
+
+

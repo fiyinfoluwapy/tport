@@ -149,3 +149,11 @@ html {
   font-weight: 300;
   font-style: normal;
 }
+
+.slide-in {
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
+}
+.slide-in.show {
+  transform: translateY(0%);
+}
