@@ -53,31 +53,34 @@
                 <!-- Right Side: Navigation Links -->
                 <div class="hidden md:flex space-x-6 slide-into-view slide-from-right">
 
-                    <a href="#about" class="text-gray-800 hover:text-[#459392] transition-colors duration-300">About</a>
+                    <a href="#about" class="text-gray-800 hover:text-amber-400 transition-colors duration-300">About</a>
                     <a href="#skills"
-                        class="text-gray-800 hover:text-[#459392] transition-colors duration-300">Skills</a>
+                        class="text-gray-800 hover:text-amber-400 transition-colors duration-300">Skills</a>
                     <a href="#projects"
-                        class="text-gray-800 hover:text-[#459392] transition-colors duration-300">Projects</a>
-                    <a href="#contact"
-                        class="text-gray-800 hover:text-[#459392] transition-colors duration-300">Contact</a>
+                        class="text-gray-800 hover:text-amber-400 transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-800 hover:text-[#459392] transition-colors duration-300">CV</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden  slide-into-view slide-from-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
-                        fill="#fEBF24">
-                        <path d="M360-120v-720h60v720h-60Zm175-181v-358l185 179-185 179Z" />
+                <button id="mobile-menu-button" class="md:hidden slide-into-view slide-from-right">
+                    <svg id="mobile-menu-icon" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
+                        width="48px" fill="#fEBF24">
+                        <path d="M360-120v-720h60v720h-60Zm175-181v-358l185 179-185 179Z"
+                            transform="rotate(90 480 -480)" />
                     </svg>
                 </button>
+
+
             </div>
 
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-                <a href="#hero" class="block px-6 py-2">Home</a>
-                <a href="#about" class="block px-6 py-2">About</a>
-                <a href="#skills" class="block px-6 py-2">Skills</a>
-                <a href="#projects" class="block px-6 py-2">Projects</a>
-                <a href="#contact" class="block px-6 py-2">Contact</a>
+                <a href="#hero" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">Projects</a>
+                <a href="#projects" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">CV</a>
+
             </div>
         </nav>
     </header>
@@ -86,7 +89,7 @@
     <section id="hero" class="flex flex-col items-center justify-center min-h-screen bg-zinc-800 text-white">
         <!--avatar-->
         <div class="relative slide-into-view ">
-            <img src="https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg" alt="avatar"
+            <img src="./img/aminationAvatar.jpg" alt="avatar"
                 class="h-40 w-40 rounded-full border-4 border-stone-400 shadow shadow-2xl">
             <p
                 class="absolute bottom-0 right-0 bg-stone-400 text-white px-2 py-1 rounded-full slide-into-view slide-from-left arima-font">
@@ -174,54 +177,60 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
                 <div class="bg-stone-400 rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/300" alt="Project Image" class="w-full h-48 object-cover">
+                    <img src="./img/zuriTeam.png" alt="snapshot of the zuriTeam project"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Project 1</h3>
+                        <h3 class="text-2xl font-semibold mb-2">Zuri Landing Page</h3>
+                        <p class="mt-2 text-1xl italic"> A sleek landing page developed for the Zuri team project.</p>
                         <div class="flex flex-wrap mb-4 mt-4">
                             <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
                             <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
-                            <span
-                                class="bg-[#AA8771] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
+
                         </div>
-                        <a href="project1.html"
+                        <a href="https://fiyinfoluwapy.github.io/zuriWebsiteFrontendTask/ " target="_blank"
                             class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300 inline-block">
-                            Learn More
+                            Take a Peek
                         </a>
                     </div>
                 </div>
 
                 <!-- Project Card 2 -->
                 <div class="bg-stone-400 rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/300" alt="Project Image" class="w-full h-48 object-cover">
+                    <img src="./img/vladKitchenHeader.png" alt="snapshot of the  e-Commerce project"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Project 2</h3>
+                        <h3 class="text-2xl font-semibold mb-2">e-Commerce Website</h3>
+                        <p class="mt-2 text-1xl italic"> User Interface Design for a Meal Ordering Website.</p>
                         <div class="flex flex-wrap mb-4 mt-4">
                             <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
                             <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
                             <span
                                 class="bg-[#AA8771] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
                         </div>
-                        <a href="project2.html"
+                        <a href="https://fiyinfoluwapy.github.io/vladimirKitchenProject/" target="_blank"
                             class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300 inline-block">
-                            Learn More
+                            Take a Peek
                         </a>
                     </div>
                 </div>
 
                 <!-- Project Card 3 -->
                 <div class="bg-stone-400 rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/300" alt="Project Image" class="w-full h-48 object-cover">
+                    <img src="./img/portfolioSnapshot.png" alt="snapshot of the portfolio project"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Project 3</h3>
+                        <h3 class="text-2xl font-semibold mb-2">Portfolio Website</h3>
+                        <p class="mt-2 text-1xl italic"> A Vibrant Portfolio Website.</p>
+
                         <div class="flex flex-wrap mb-4 mt-4">
                             <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
                             <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
                             <span
                                 class="bg-[#AA8771] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
                         </div>
-                        <a href="project3.html"
+                        <a href="https://fiyinfoluwapy.github.io/fiyinfoluwa-portfolio/" target="_blank"
                             class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300 inline-block">
-                            Learn More
+                            Take a Peak
                         </a>
                     </div>
                 </div>
@@ -465,14 +474,29 @@
 
                 <!--testimony card 2-->
                 <div class="testimonial-card fade-into-view text-gray-700">
-                    <p class="text-lg italic text-gray-900">"I cannot believe how beautiful my landing page is! I wanted something that would create an impact, and the cooked! People coming in to the site are very often in first… I was amazed at how many positive reviews I have got on the page, how professional looking and warm it is. I’m the happiest!"</p>
+                    <p class="text-lg italic text-gray-900">"I cannot believe how beautiful my landing page is! I wanted
+                        something that would create an impact, and the cooked! People coming in to the site are very
+                        often in first… I was amazed at how many positive reviews I have got on the page, how
+                        professional looking and warm it is. I’m the happiest!"</p>
                     <h3 class="mt-4 font-semibold text-gray-900">- Maggs Socials</h3>
                 </div>
 
                 <!--testimony card 3-->
                 <div class="testimonial-card fade-into-view text-gray-700">
-                    <p class="text-lg italic text-gray-900">"It’s been a pleasure working alongside Temidire. When I brought him on as an intern to help teach primary website development skills to students, I was genuinely surprised by how quickly the students progressed under his guidance."</p>
+                    <p class="text-lg italic text-gray-900">"It’s been a pleasure working alongside Temidire. When I
+                        brought him on as an intern to help teach primary website development skills to students, I was
+                        genuinely surprised by how quickly the students progressed under his guidance."</p>
                     <h3 class="mt-4 font-semibold text-gray-900">-Mr Jide Sofile (SoftNetExpert) New Horizons NG</h3>
+                </div>
+
+
+                <!--testimony card 4-->
+                <div class="testimonial-card fade-into-view text-gray-700">
+                    <p class="text-lg italic text-gray-900">"He possesses outstanding clarity in expressing intricate
+                        ideas with the added advantage of nurturing everyone, even the inexperienced, within the
+                        shortest possible time. He has innate skills that readily enable him teach and nurture people."
+                    </p>
+                    <h3 class="mt-4 font-semibold text-gray-900">- Monkoffville Educational Services.</h3>
                 </div>
             </div>
         </div>
@@ -482,14 +506,17 @@
         <div class="container mx-auto px-4 text-center">
             <!-- Social Media Links -->
             <div class="mb-4">
-                <a href="https://github.com/yourprofile" class="mx-2 text-gray-400 hover:text-white">
-                    <i class="fab fa-github"></i> <!-- Font Awesome Icon -->
+                <a href="https://github.com/fiyinfoluwapy" target="_blank" class="mx-2 text-gray-400 hover:text-white">
+                    <i class="fab fa-github"></i> 
                 </a>
-                <a href="https://linkedin.com/in/yourprofile" class="mx-2 text-gray-400 hover:text-white">
+                <a href="https://linkedin.com/ad-fiyinfoluwa-py09" target="_blank" class="mx-2 text-gray-400 hover:text-white">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://twitter.com/yourprofile" class="mx-2 text-gray-400 hover:text-white">
+                <a href="https://x.com/FiyinfoluwaPy" target="_blank" class="mx-2 text-gray-400 hover:text-white">
                     <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/teedire_9/" target="_blank" class="mx-2 text-gray-400 hover:text-white">
+                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
 

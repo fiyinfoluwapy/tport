@@ -54,11 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
 //mobile view and project 
 
 
+// // Mobile menu toggle
+// document.getElementById('mobile-menu-button').addEventListener('click', function () {
+//   const mobileMenu = document.getElementById('mobile-menu');
+//   mobileMenu.classList.toggle('hidden'); // Toggle the visibility of the mobile menu
+// });
+
 // Mobile menu toggle
 document.getElementById('mobile-menu-button').addEventListener('click', function () {
   const mobileMenu = document.getElementById('mobile-menu');
-  mobileMenu.classList.toggle('hidden'); // Toggle the visibility of the mobile menu
+  const menuIcon = document.getElementById('mobile-menu-icon');
+
+  // Toggle the visibility of the mobile menu
+  mobileMenu.classList.toggle('hidden');
+
+  // Toggle the rotation of the button icon
+  menuIcon.classList.toggle('rotate-up');
 });
+
 
 // Select all learn more buttons
 document.querySelectorAll('.learn-more-btn').forEach(button => {
@@ -82,48 +95,7 @@ document.querySelectorAll('.learn-more-btn').forEach(button => {
   });
 });
 
-// JavaScript for the Contact Form
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const contactForm = document.getElementById('contact-form');
-//   const contactSection = document.getElementById('contact');
-
-//   const observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         contactForm.classList.add('fade-in'); // Add fade-in class
-//         observer.unobserve(contactSection); // Stop observing after fading in
-//       }
-//     });
-//   }, {
-//     threshold: 0.5 // Fade in when 50% of the section is visible
-//   });
-
-//   observer.observe(contactSection); // Observe the contact section
-
-//   // Handle form submission
-//   document.getElementById('contact-form').addEventListener('submit', function (e) {
-//     e.preventDefault();
-//     const form = e.target;
-
-//     // Example: Submit to Formspree
-//     const formData = new FormData(form);
-//     fetch('https://formspree.io/f/YOUR_FORM_ID', { // Replace with your Formspree ID
-//       method: 'POST',
-//       body: formData,
-//       headers: {
-//         'Accept': 'application/json'
-//       }
-//     }).then(response => {
-//       if (response.ok) {
-//         alert('Thanks for your message!');
-//         form.reset(); // Reset the form after successful submission
-//       } else {
-//         alert('Oops! There was a problem submitting your form');
-//       }
-//     });
-//   });
-// });
 
 
 // scroll-triggered fade in for contact form 
@@ -151,24 +123,6 @@ document.querySelectorAll('.faq-title').forEach(title => {
   });
 });
 
-// Testimonials Carousel Animation
-// let currentTestimonial = 0;
-// const testimonials = document.querySelectorAll('.testimonial-slide');
-
-// function showNextTestimonial() {
-//   testimonials[currentTestimonial].classList.remove('opacity-100');
-//   testimonials[currentTestimonial].classList.add('opacity-0');
-
-//   currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-
-//   testimonials[currentTestimonial].classList.remove('opacity-0');
-//   testimonials[currentTestimonial].classList.add('opacity-100');
-// }
-
-// setInterval(showNextTestimonial, 4000);
-// testimonials[0].classList.add('opacity-100');
-
-//js to handle tesimonial carousel
 
 // JavaScript to handle the carousel functionality
 const testimonials = document.querySelectorAll('.testimonial-card');

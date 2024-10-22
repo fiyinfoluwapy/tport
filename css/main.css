@@ -3,6 +3,17 @@ canvas {
 }
 
 
+/* Smooth rotation transition */
+#mobile-menu-icon {
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+/* Rotate the SVG to face left (180 degrees from right) */
+.rotate-up {
+  transform: rotate(180deg); /* Rotates 180 degrees from facing right to left */
+}
+
+
 .input-field {
   width: 100%;
   padding: 0.75rem;
