@@ -26,9 +26,7 @@ html {
 
 #contact {
   min-height: 100vh;
-  /* Ensure enough height for scrolling */
   position: relative;
-  /* For the Intersection Observer */
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 3.8s ease, transform 3.8s ease;
@@ -46,7 +44,6 @@ html {
   padding: 0.75rem;
   border: 1px solid #DCBEA4;
   border-radius: 8px;
-  /* Rounded corners */
   background-color: white;
   outline: none;
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;

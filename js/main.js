@@ -188,30 +188,30 @@ function showTestimonial(index) {
 setInterval(() => {
   currentIndex = (currentIndex + 1) % testimonials.length;
   showTestimonial(currentIndex);
-}, 4000); // Change the time here (4000 = 4 seconds)
+}, 3000); // Change the time here (4000 = 4 seconds)
 
 
 //js for header section 
 
-window.onload = function() {
+window.onload = function () {
   // Select elements to animate
   const items = document.querySelectorAll('.slide-into-view');
 
   // Animate top container items
   items.forEach((item, index) => {
-      setTimeout(() => {
-          item.classList.add('slide-into-view-active');
-          // Add specific active classes for final positions
-          if (item.classList.contains('slide-from-left')) {
-              item.classList.add('slide-from-left-active');
-          } else if (item.classList.contains('slide-from-right')) {
-              item.classList.add('slide-from-right-active');
-          } else if (item.classList.contains('slide-from-top')) {
-              item.classList.add('slide-from-top-active');
-          } else if (item.classList.contains('slide-from-bottom')) {
-              item.classList.add('slide-from-bottom-active');
-          }
-      }, index * 300); // Delay each item
+    setTimeout(() => {
+      item.classList.add('slide-into-view-active');
+      // Add specific active classes for final positions
+      if (item.classList.contains('slide-from-left')) {
+        item.classList.add('slide-from-left-active');
+      } else if (item.classList.contains('slide-from-right')) {
+        item.classList.add('slide-from-right-active');
+      } else if (item.classList.contains('slide-from-top')) {
+        item.classList.add('slide-from-top-active');
+      } else if (item.classList.contains('slide-from-bottom')) {
+        item.classList.add('slide-from-bottom-active');
+      }
+    }, index * 400); // Delay each item
   });
 }
 
@@ -225,4 +225,75 @@ followButton.addEventListener('click', () => {
   socialIcons.classList.toggle('hidden');
 });
 
+
+
+//form validaion 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById('contact-form');
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phoneNumber');
+  const firstNameInput = document.getElementById('firstName');
+  const lastNameInput = document.getElementById('lastName');
+  const messageInput = document.getElementById('message');
+
+  // Email validation
+  emailInput.addEventListener('input', function () {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+      emailInput.setCustomValidity("Please enter a valid email address.");
+    } else {
+      emailInput.setCustomValidity('');
+    }
+  });
+
+  // Phone number validation
+  phoneInput.addEventListener('input', function () {
+    const phonePattern = /^[0-9]{10,15}$/;
+    if (!phonePattern.test(phoneInput.value)) {
+      phoneInput.setCustomValidity("Please enter a valid phone number.");
+    } else {
+      phoneInput.setCustomValidity('');
+    }
+  });
+
+  // First name validation
+  firstNameInput.addEventListener('input', function () {
+    if (firstNameInput.value.trim() === '') {
+      firstNameInput.setCustomValidity("First name cannot be empty.");
+    } else {
+      firstNameInput.setCustomValidity('');
+    }
+  });
+
+  // Last name validation
+  lastNameInput.addEventListener('input', function () {
+    if (lastNameInput.value.trim() === '') {
+      lastNameInput.setCustomValidity("Last name cannot be empty.");
+    } else {
+      lastNameInput.setCustomValidity('');
+    }
+  });
+
+  // Message validation
+  messageInput.addEventListener('input', function () {
+    if (messageInput.value.trim() === '') {
+      messageInput.setCustomValidity("Please enter a message.");
+    } else {
+      messageInput.setCustomValidity('');
+    }
+  });
+
+  // Form submit handler
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault();  // Prevent form submission if invalid
+    } else {
+      // Use a timeout to reset the form after a slight delay to ensure the submission goes through
+      setTimeout(() => {
+        form.reset();  // Reset the form fields
+      }, 800);
+    }
+  });
+});
 
