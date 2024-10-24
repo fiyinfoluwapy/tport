@@ -72,59 +72,63 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
   menuIcon.classList.toggle('rotate-up');
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Typewriter effect text
-  const introText = "@teedire_9: Crafting exceptional digital experiences.";
-  let index = 0;
-  let typewriterStarted = false; // To ensure the effect runs only once
+// JavaScript for typewriter effect and toggling the collapsible content
 
-  // Typewriter function
-  function typeWriter() {
-    if (index < introText.length) {
-      document.getElementById('intro').innerHTML += introText.charAt(index);
-      index++;
-      setTimeout(typeWriter, 100); // Adjust typing speed here
-    }
+// JavaScript for typewriter effect and toggling the collapsible content
+
+// Typewriter effect text
+const introText = "@teedire_9: Crafting exceptional digital experiences.";
+let index = 0;
+let typewriterStarted = false; // To ensure the effect runs only once
+
+// Typewriter function
+function typeWriter() {
+  if (index < introText.length) {
+    document.getElementById('intro').innerHTML += introText.charAt(index);
+    index++;
+    setTimeout(typeWriter, 300); 
   }
+}
 
-  // Trigger typewriter effect on scroll-to-view (IntersectionObserver)
-  const aboutSection = document.getElementById('about');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !typewriterStarted) {
-        typewriterStarted = true;
-        typeWriter();
-        observer.unobserve(aboutSection); // Stop observing after the effect has started
-      }
-    });
-  });
-  observer.observe(aboutSection);
-
-  // Trigger typewriter effect on link click
-  document.querySelectorAll('a[href="#about"]').forEach(link => {
-    link.addEventListener('click', function (event) {
-      event.preventDefault(); // Prevent default anchor click behavior
-      const intro = document.getElementById('intro');
-      if (intro.innerHTML === "" && !typewriterStarted) {
-        typewriterStarted = true;
-        typeWriter(); // Call the typewriter function when the link is clicked
-        aboutSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the about section
-      } else {
-        aboutSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll if typewriter has already run
-      }
-    });
-  });
-
-  // Collapsible details section
-  const detailsToggle = document.getElementById('details-toggle');
-  const details = document.getElementById('details');
-
-  detailsToggle.addEventListener('click', function () {
-    details.classList.toggle('hidden');
-    details.classList.toggle('transition');
-    details.classList.toggle('duration-300');
+// Trigger typewriter effect on scroll-to-view (IntersectionObserver)
+const aboutSection = document.getElementById('about');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !typewriterStarted) {
+      typewriterStarted = true;
+      typeWriter();
+    }
   });
 });
+observer.observe(aboutSection);
+
+// Trigger typewriter effect on link click
+document.querySelectorAll('a[href="#about"]').forEach(link => {
+  link.addEventListener('click', function () {
+    const intro = document.getElementById('intro');
+    if (intro.innerHTML === "" && !typewriterStarted) {
+      typewriterStarted = true;
+      typeWriter(); // Call the typewriter function when the link is clicked
+    }
+  });
+});
+
+// Collapsible details section
+const detailsToggle = document.getElementById('details-toggle');
+const details = document.getElementById('details');
+
+detailsToggle.addEventListener('click', function () {
+  details.classList.toggle('hidden');
+  details.classList.toggle('transition');
+  details.classList.toggle('duration-300');
+});
+
+
+
+
+
+
+
 
 
 
