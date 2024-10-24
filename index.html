@@ -78,7 +78,8 @@
                 <a href="#hero" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">Home</a>
                 <a href="#about" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">About</a>
                 <a href="#skills" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">Skills</a>
-                <a href="#projects" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">Projects</a>
+                <a href="#projects"
+                    class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">Projects</a>
                 <a href="#projects" class="block px-6 py-2 hover:text-amber-400 transition-colors duration-300">CV</a>
 
             </div>
@@ -174,20 +175,21 @@
     <section id="projects" class="py-20 bg-white">
         <div class="container mx-auto px-4 md:px-8">
             <h2 class="text-3xl font-bold text-center mb-12 arima-font">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Correct Grid Container for All Project Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project Card 1 -->
                 <div class="bg-stone-400 rounded-lg shadow-lg overflow-hidden">
                     <img src="./img/zuriTeam.png" alt="snapshot of the zuriTeam project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-2">Zuri Landing Page</h3>
-                        <p class="mt-2 text-1xl italic"> A sleek landing page developed for the Zuri team project.</p>
+                        <p class="mt-2 text-1xl italic">A sleek landing page developed for the Zuri team project.</p>
                         <div class="flex flex-wrap mb-4 mt-4">
                             <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
                             <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
-
                         </div>
-                        <a href="https://fiyinfoluwapy.github.io/zuriWebsiteFrontendTask/ " target="_blank"
+                        <a href="https://fiyinfoluwapy.github.io/zuriWebsiteFrontendTask/" target="_blank"
                             class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300 inline-block">
                             Take a Peek
                         </a>
@@ -196,11 +198,11 @@
 
                 <!-- Project Card 2 -->
                 <div class="bg-stone-400 rounded-lg shadow-lg overflow-hidden">
-                    <img src="./img/vladKitchenHeader.png" alt="snapshot of the  e-Commerce project"
+                    <img src="./img/vladKitchenHeader.png" alt="snapshot of the e-Commerce project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-2">e-Commerce Website</h3>
-                        <p class="mt-2 text-1xl italic"> User Interface Design for a Meal Ordering Website.</p>
+                        <p class="mt-2 text-1xl italic">User Interface Design for a Meal Ordering Website.</p>
                         <div class="flex flex-wrap mb-4 mt-4">
                             <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
                             <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
@@ -220,8 +222,7 @@
                         class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-2">Portfolio Website</h3>
-                        <p class="mt-2 text-1xl italic"> A Vibrant Portfolio Website.</p>
-
+                        <p class="mt-2 text-1xl italic">A Vibrant Portfolio Website.</p>
                         <div class="flex flex-wrap mb-4 mt-4">
                             <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
                             <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
@@ -230,13 +231,74 @@
                         </div>
                         <a href="https://fiyinfoluwapy.github.io/fiyinfoluwa-portfolio/" target="_blank"
                             class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300 inline-block">
-                            Take a Peak
+                            Take a Peek
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="bg-stone-400 rounded-lg shadow-lg overflow-hidden">
+                    <img src="./img/peeskyPaws.png" alt="snapshot of the peeskyPaws project"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Peesky Paws Website</h3>
+                        <p class="mt-2 text-1xl italic">A pet service website design.</p>
+                        <div class="flex flex-wrap mb-4 mt-4">
+                            <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
+                            <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
+                            <span
+                                class="bg-[#AA8771] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
+                        </div>
+                        <a href="https://fiyinfoluwapy.github.io/pet-insurance/" target="_blank"
+                            class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300 inline-block">
+                            Take a Peek
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="bg-stone-400 rounded-lg shadow-lg overflow-hidden">
+                    <img src="./img/taskmanager.png" alt="snapshot of the task manager project"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Task Manager App</h3>
+                        <p class="mt-2 text-1xl italic">A task management web app.</p>
+                        <div class="flex flex-wrap mb-4 mt-4">
+                            <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
+                            <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
+                            <span
+                                class="bg-[#AA8771] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
+                        </div>
+                        <a href="https://fiyinfoluwapy.github.io/TaskM/" target="_blank"
+                            class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300 inline-block">
+                            Take a Peek
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="bg-stone-400 rounded-lg shadow-lg overflow-hidden">
+                    <img src="./img/tportSnapshot.png" alt="snapshot of the zuriTeam project"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Teedire Portfolio Website</h3>
+                        <p class="mt-2 text-1xl italic">A sleek portfolio website designed for teedire_9.</p>
+                        <div class="flex flex-wrap mb-4 mt-4">
+                            <span class="bg-slate-500 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">HTML</span>
+                            <span class="bg-[#459392] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">CSS</span>
+                            <span
+                                class="bg-[#AA8771] text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
+                        </div>
+                        <a href="https://fiyinfoluwapy.github.io/tport/" target="_blank"
+                            class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition duration-300 inline-block">
+                            Take a Peek
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="contact" class="min-h-screen py-10 bg-gray-100 ">
         <div class="max-w-4xl mx-auto p-6">
@@ -331,9 +393,6 @@
             <div class="svg-item text-center">
                 <img src="./img/microsoft-svgrepo-com.svg" alt="Microsoft"
                     class="tech-icon w-20 md:w-24 transition-transform duration-300 hover:scale-110">
-
-
-
             </div>
 
             <div class="svg-item text-center">
@@ -507,15 +566,17 @@
             <!-- Social Media Links -->
             <div class="mb-4">
                 <a href="https://github.com/fiyinfoluwapy" target="_blank" class="mx-2 text-gray-400 hover:text-white">
-                    <i class="fab fa-github"></i> 
+                    <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/ad-fiyinfoluwa-py09" target="_blank" class="mx-2 text-gray-400 hover:text-white">
+                <a href="https://linkedin.com/ad-fiyinfoluwa-py09" target="_blank"
+                    class="mx-2 text-gray-400 hover:text-white">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://x.com/FiyinfoluwaPy" target="_blank" class="mx-2 text-gray-400 hover:text-white">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.instagram.com/teedire_9/" target="_blank" class="mx-2 text-gray-400 hover:text-white">
+                <a href="https://www.instagram.com/teedire_9/" target="_blank"
+                    class="mx-2 text-gray-400 hover:text-white">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
