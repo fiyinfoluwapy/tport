@@ -72,11 +72,13 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
   menuIcon.classList.toggle('rotate-up');
 });
 
-// JavaScript for typewriter effect and toggling the collapsible content
 document.addEventListener('DOMContentLoaded', function () {
-  // Typewriter effect
-  const introText = "@teedire_9: Crafting Exceptional Websites.";
+  // Typewriter effect text
+  const introText = "@teedire_9: Crafting exceptional digital experiences.";
   let index = 0;
+  let typewriterStarted = false; // To ensure the effect runs only once
+
+  // Typewriter function
   function typeWriter() {
     if (index < introText.length) {
       document.getElementById('intro').innerHTML += introText.charAt(index);
@@ -84,7 +86,34 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(typeWriter, 100); // Adjust typing speed here
     }
   }
-  typeWriter();
+
+  // Trigger typewriter effect on scroll-to-view (IntersectionObserver)
+  const aboutSection = document.getElementById('about');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !typewriterStarted) {
+        typewriterStarted = true;
+        typeWriter();
+        observer.unobserve(aboutSection); // Stop observing after the effect has started
+      }
+    });
+  });
+  observer.observe(aboutSection);
+
+  // Trigger typewriter effect on link click
+  document.querySelectorAll('a[href="#about"]').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default anchor click behavior
+      const intro = document.getElementById('intro');
+      if (intro.innerHTML === "" && !typewriterStarted) {
+        typewriterStarted = true;
+        typeWriter(); // Call the typewriter function when the link is clicked
+        aboutSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the about section
+      } else {
+        aboutSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll if typewriter has already run
+      }
+    });
+  });
 
   // Collapsible details section
   const detailsToggle = document.getElementById('details-toggle');
