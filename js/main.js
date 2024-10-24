@@ -72,29 +72,30 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
   menuIcon.classList.toggle('rotate-up');
 });
 
+// JavaScript for typewriter effect and toggling the collapsible content
+document.addEventListener('DOMContentLoaded', function () {
+  // Typewriter effect
+  const introText = "@teedire_9: Crafting Exceptional Websites.";
+  let index = 0;
+  function typeWriter() {
+    if (index < introText.length) {
+      document.getElementById('intro').innerHTML += introText.charAt(index);
+      index++;
+      setTimeout(typeWriter, 100); // Adjust typing speed here
+    }
+  }
+  typeWriter();
 
-// Select all learn more buttons
-document.querySelectorAll('.learn-more-btn').forEach(button => {
-  button.addEventListener('click', function () {
-    // Get the project detail for the clicked button
-    const projectDetail = this.nextElementSibling;
+  // Collapsible details section
+  const detailsToggle = document.getElementById('details-toggle');
+  const details = document.getElementById('details');
 
-    // Get all project details
-    const allProjectDetails = document.querySelectorAll('.project-detail');
-
-    // Hide all project details except the one clicked
-    allProjectDetails.forEach(detail => {
-      // Only hide if it's not the clicked project detail
-      if (detail !== projectDetail) {
-        detail.classList.add('hidden');
-      }
-    });
-
-    // Toggle visibility for the clicked project detail
-    projectDetail.classList.toggle('hidden');
+  detailsToggle.addEventListener('click', function () {
+    details.classList.toggle('hidden');
+    details.classList.toggle('transition');
+    details.classList.toggle('duration-300');
   });
 });
-
 
 
 
