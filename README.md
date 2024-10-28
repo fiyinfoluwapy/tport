@@ -23,7 +23,7 @@ This portfolio site is built with a combination of HTML, CSS, JavaScript, and Ta
 
  Demo
 
-For a live demo of the website, [click here]((https://fiyinfoluwapy.github.io/tport/).
+For a live demo of the website, [click here](https://fiyinfoluwapy.github.io/tport/).
 
  Future Enhancements
 
