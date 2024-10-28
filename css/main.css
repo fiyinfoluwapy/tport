@@ -13,6 +13,16 @@ canvas {
   transform: rotate(180deg); /* Rotates 180 degrees from facing right to left */
 }
 
+/* For Chrome, Safari, and Edge */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: none; /* Hides scrollbar without removing scroll functionality */
+}
+
 
 .input-field {
   width: 100%;
