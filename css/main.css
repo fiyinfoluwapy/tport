@@ -21,7 +21,11 @@ body::-webkit-scrollbar {
 /* For Firefox */
 body {
   scrollbar-width: none; /* Hides scrollbar without removing scroll functionality */
+  overflow-y: hidden;
 }
+
+
+
 
 
 .input-field {
