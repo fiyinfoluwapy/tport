@@ -124,16 +124,7 @@ detailsToggle.addEventListener('click', function () {
 });
 
 
-
-
-
-
-
-
-
-
 // scroll-triggered fade in for contact form 
-
 
 const contactSection = document.getElementById('contact');
 window.addEventListener('scroll', () => {

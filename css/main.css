@@ -13,21 +13,16 @@ canvas {
   transform: rotate(180deg); /* Rotates 180 degrees from facing right to left */
 }
 
-
-
-
-
+/* Hide scrollbar, but still allow scrolling */
 body {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
 }
 
+/* For Chrome, Edge, Safari */
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
-
-
-
 
 .input-field {
   width: 100%;
@@ -55,7 +50,7 @@ html {
   position: relative;
   opacity: 0;
   transform: translateX(-20px);
-  transition: opacity 3.8s ease, transform 3.8s ease;
+  transition: opacity 2.4s ease, transform 2.4s ease;
 }
 
 #contact.fade-in {
